@@ -1,0 +1,14 @@
+####################################################################
+# Authors: Ahmad Aji Santoso
+# Email: ahmad21@student.ub.ac.id
+####################################################################
+
+---
+  - name: Test internet web server
+    hosts: localhost
+    become: false
+    tasks:
+    - name: connect to internet web server
+      uri:
+        url: http://serverb.lab.example.com
+        status_code: 200
