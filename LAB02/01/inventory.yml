@@ -48,3 +48,12 @@
           url: "http://materials.example.com/labs/playbook-review/index.php"
           dest: /var/www/html/index.php
           mode: 0644
+
+  - name: Test internet web server
+    hosts: localhost
+    become: false
+    tasks:
+    - name: connect to internet web server
+      uri:
+        url: http://serverb.lab.example.com
+        status_code: 200
