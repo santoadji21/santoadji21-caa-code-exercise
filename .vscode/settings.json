@@ -1,5 +1,5 @@
 {
     "yaml.schemas": {
-        "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible.json#/$defs/tasks": "file:///e%3A/FILKOM%20UB/caa/code-excercise/LAB03/playbook.yml"
+        "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible.json#/$defs/playbook": "file:///e%3A/FILKOM%20UB/caa/code-excercise/LAB03/playbook.yml"
     }
 }

@@ -81,9 +81,10 @@
 
 - name: test web server with basic auth
   hosts: localhost
-  become: no
+  become: false
   vars:
     - web_user: guest
+    - web_pass: redhat
   vars_files:
     - vars/secret.yml
   tasks:
