@@ -83,8 +83,8 @@
   hosts: localhost
   become: false
   vars:
-    - web_user: guest
-    - web_pass: redhat
+    web_user: guest
+    web_pass: redhat
   vars_files:
     - vars/secret.yml
   tasks:
