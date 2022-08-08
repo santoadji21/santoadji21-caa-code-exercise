@@ -1,7 +1,7 @@
 ---
----
-- name: Repository Configuration
+- name: Ensure Apache Storage Configuration
   hosts: webservers
+  vars files: storage _vars.yml
   tasks:
     - name: Correct partitions exist on /dev/vdb
       parted:
