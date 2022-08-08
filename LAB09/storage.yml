@@ -1,6 +1,8 @@
 ---
-
-partitions:
+---
+- name: Repository Configuration
+  hosts: webservers
+  tasks:
     - name: Correct partitions exist on /dev/vdb
       parted:
         device: /dev/vdb
@@ -10,14 +12,12 @@ partitions:
         part_end: "{{ item.end }}"
       loop: "{{ partitions }}"
 
-volume_groups:
     - name: Ensure Volume Groups Exist
       lvg:
         vg: "{{ item.name }}"
         pvs: "{{ item.devices }}"
       loop: "{{  volume_groups }}"
 
-logical_volumes:
     - name: Create each Logical Volume (LV) if needed
       lvol:
         vg: "{{ item.vgroup }}"
